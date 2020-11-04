@@ -1,7 +1,7 @@
 1. Run devstart
 2. Open localhost:5000/graphql
 
-
+### Queries
 ```javascript
 {
   book(id: 1) {
@@ -41,6 +41,7 @@ query{
 }
 ```
 
+### Mutations
 ```javascript
 mutation{
 	addBook(name:"test book" authorId: 123){
