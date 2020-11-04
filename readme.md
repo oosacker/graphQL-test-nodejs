@@ -4,7 +4,8 @@
 4. Get reponse "Hello World"
 
 Query:
-```{
+```javascript
+{
   book(id: 1) {
     id
     name
@@ -12,10 +13,12 @@ Query:
       name
     }
   }
-}```
+}
+```
 
 Returns:
-```{
+```javascript
+{
   "data": {
     "book": {
       "id": 1,
@@ -25,4 +28,5 @@ Returns:
       }
     }
   }
-}```
+}
+```
