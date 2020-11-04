@@ -1,7 +1,7 @@
 1. Run devstart
 2. Open localhost:5000/graphql
 
-Query:
+
 ```javascript
 {
   book(id: 1) {
@@ -14,17 +14,45 @@ Query:
 }
 ```
 
-Returns:
+
 ```javascript
 {
-  "data": {
-    "book": {
-      "id": 1,
-      "name": "Harry Potter and the Chamber of Secrets",
-      "author": {
-        "name": "J. K. Rowling"
-      }
+  books {
+    id
+    name
+    author {
+      id
+      name
     }
+  }
+}
+```
+
+```javascript
+query{
+  authors{
+    id
+    name
+    books{
+      id
+      name
+    }
+  }
+}
+```
+
+```javascript
+mutation{
+	addBook(name:"test book" authorId: 123){
+    authorId
+  }
+}
+```
+
+```javascript
+mutation{
+	addAuthor(name:"test author 12345"){
+    name
   }
 }
 ```
